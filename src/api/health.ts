@@ -1,7 +1,7 @@
 import express from 'express';
 
-const health = express.Router();
-health.get('/health', (_, res) => {
+const api = express.Router();
+api.get('/health', (_, res) => {
   res.send({
     status: 'OK',
     details: 'Everything looks good 👌',
@@ -9,4 +9,4 @@ health.get('/health', (_, res) => {
   });
 });
 
-export default health;
+export default api;
