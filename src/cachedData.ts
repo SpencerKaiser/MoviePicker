@@ -2,7 +2,9 @@ import fs from 'fs';
 import { Data } from './types/data';
 import getRequiredEnvVar from './utils/getRequiredEnvVar';
 
-const users = getRequiredEnvVar('USERS').split(',');
+const users = getRequiredEnvVar('USERS')
+  .split(',')
+  .map((userName) => userName.trim());
 
 let data: Data;
 
