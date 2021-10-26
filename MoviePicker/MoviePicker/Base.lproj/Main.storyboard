@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoviePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popcorn.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LrE-fc-p1p">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4L-SG-Z4m">
+                                <rect key="frame" x="111.5" y="771" width="191" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Who get's to pick?"/>
+                                <connections>
+                                    <action selector="pickWinnerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hcK-1E-Oa4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4v-qP-adv">
+                                <rect key="frame" x="125" y="144" width="164" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odds Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5m6-nG-AkD">
+                                <rect key="frame" x="150.5" y="433.5" width="113.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i4L-SG-Z4m" secondAttribute="bottom" constant="50" id="0F8-Hj-muj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W4v-qP-adv" secondAttribute="trailing" constant="20" id="5fH-GG-S9y"/>
+                            <constraint firstItem="5m6-nG-AkD" firstAttribute="centerX" secondItem="W4v-qP-adv" secondAttribute="centerX" id="93G-FF-WJ5"/>
+                            <constraint firstItem="W4v-qP-adv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="DlM-Tz-pys"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="LrE-fc-p1p" secondAttribute="bottom" constant="-34" id="FXC-uj-PXX"/>
+                            <constraint firstItem="i4L-SG-Z4m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HRS-qq-z3C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LrE-fc-p1p" secondAttribute="trailing" constant="-20" id="RaC-cR-faz"/>
+                            <constraint firstItem="W4v-qP-adv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="YUq-G1-ohh"/>
+                            <constraint firstItem="LrE-fc-p1p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="eLY-RC-Dxc"/>
+                            <constraint firstItem="LrE-fc-p1p" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="gjB-2L-Rej"/>
+                            <constraint firstItem="5m6-nG-AkD" firstAttribute="centerY" secondItem="LrE-fc-p1p" secondAttribute="centerY" id="jbx-SX-upe"/>
+                            <constraint firstItem="W4v-qP-adv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="mT7-NV-DYB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="5m6-nG-AkD" id="4sN-cF-bbu"/>
+                        <outlet property="winnerLabel" destination="W4v-qP-adv" id="gWQ-Lo-7MS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="popcorn.jpg" width="1920" height="1280"/>
+    </resources>
+</document>
